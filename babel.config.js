@@ -41,6 +41,21 @@ module.exports = {
       ],
       "plugins": [
         [
+          "babel-plugin-module-resolver",
+          {
+            "alias": {
+              "root": ".",
+              "components": "./src/core/components",
+              "containers": "./src/core/containers",
+              "core": "./src/core",
+              "plugins": "./src/plugins",
+              "img": "./src/img",
+              "corePlugins": "./src/core/plugins",
+              "less": "./src/less"
+            }
+          }
+        ],
+        [
           "@babel/plugin-transform-runtime",
           {
             "absoluteRuntime": false,
